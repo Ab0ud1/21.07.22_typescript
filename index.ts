@@ -5,19 +5,26 @@ enum Fruit {
   KIWI = 'kiwi',
   APPLE = 'apple'
 }
-const fruitBasket = {
+
+type basket ={
+  [key in Fruit]: number;
+}
+
+const fruitBasket: basket  = {
   banana: 2,
   orange: 3,
   kiwi: 2,
   apple: 3
 };
 
+
 // 2. Add typings/access modifiers to the Person class
 class Person {
-  name;
-  gender;
-  age;
-  likes;
+  name: string;
+  gender: string;
+  age: number;
+  likes: string[];
+
   public constructor(name, gender, age, likes) {
     this.name = name;
     this.gender = gender;
